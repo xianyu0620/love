@@ -35,7 +35,7 @@
 
     
         <div class="post-main-title">
-            MySQL
+            
         </div>
         <div class="post-meta">
             2022-05-17
@@ -43,7 +43,59 @@
     
 
     <div class="post-md">
-        <p>#MySQL<br>##数据库<br>    1.DB：数据库，保存的容器（像一个仓库）<br>    2.DBMS：数据库管理系统，又称数据库软件，用于管理DB中的数据（相当于一个仓库管理员）<br>    3.SQL：用于和DBMS的一个语言，sql可以用于其他的数据库<br>##数据库的特点<br>    1.先将数据放到表再放到库中<br>    2.表为列组成，在这里叫字段<br>##MySQL登录和退出<br>    win自带客户端<br>    登录：mysql -h主机名 -p客户端 -u用户名 -p密码<br>    退出：exit或ctrl+c<br>##数据库常用指令<br>    1.查询所有数据库：<br>    show databases；<br>    2.查询当前数据库：<br>    select database;(）<br>    3.查询当前库所有表：<br>    show tables;<br>    4.查询其它库的表：<br>    show tables from 库名;<br>    5.创建数据库：<br>    CREATE DATABASE [ IF NOT EXISTS ] 数据库名 [ DEFAULT CHARSET 字符集] [COLLATE 排序规则 ];<br>    6.创建表：<br>    create table 表名（<br>    列名 列类型，<br>    列名 列类型，<br>    ）；<br>    7.删除数据库：<br>    DROP DATABASE [ IF EXISTS ] 数据库名;<br>    8.使用数据库：<br>    use 库名;<br>    9.查看表结构：<br>    desc 表名；<br>    10.查看服务器版本：<br>    方法一：select version();<br>    方法二：mysql –version或mysql –V<br>##查询命令<br>    1.起别名<br>    方式一：<br>    select name AS 名字<br>    select last_name AS 姓,first_name AS 名 from employees;<br>    方式二：<br>    select last_name 姓,first_name 名 from employees;(AS可以用空格代替)<br>    注意点：<br>    错误：<br>    SELECT salary AS OUT put FROM employees<br>    正确：<br>    SELECT salary AS “OUT put” FROM employees(不想让它是关键词可以加个双引号或单引号)<br>    2.去重<br>    SELECT DISTINCT department_id FROM employees;(加个distinct)<br>    3.连接<br>    sql里的＋只能用于运算,SQL里连接用concat<br>    SELECT CONCAT （’a’，’b’） AS 别名</p>
+        <h2 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h2><h3 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h3><pre><code>1.DB：数据库，保存的容器（像一个仓库）
+2.DBMS：数据库管理系统，又称数据库软件，用于管理DB中的数据（相当于一个仓库管理员）
+3.SQL：用于和DBMS的一个语言，sql可以用于其他的数据库
+</code></pre>
+<h3 id="数据库的特点"><a href="#数据库的特点" class="headerlink" title="数据库的特点"></a>数据库的特点</h3><pre><code>1.先将数据放到表再放到库中
+2.表为列组成，在这里叫字段
+</code></pre>
+<h3 id="MySQL登录和退出"><a href="#MySQL登录和退出" class="headerlink" title="MySQL登录和退出"></a>MySQL登录和退出</h3><pre><code>win自带客户端
+登录： &#39;mysql -h主机名 -p客户端 -u用户名 -p密码&#39;
+退出：exit或ctrl+c
+</code></pre>
+<h3 id="数据库常用指令"><a href="#数据库常用指令" class="headerlink" title="数据库常用指令"></a>数据库常用指令</h3><pre><code>1.查询所有数据库：
+show databases；
+2.查询当前数据库：
+select database;(）
+3.查询当前库所有表：
+show tables;
+4.查询其它库的表：
+show tables from 库名;
+5.创建数据库：
+CREATE DATABASE [ IF NOT EXISTS ] 数据库名 [ DEFAULT CHARSET 字符集] [COLLATE 排序规则 ];
+6.创建表：
+create table 表名（
+列名 列类型，
+列名 列类型，
+）；
+7.删除数据库：
+DROP DATABASE [ IF EXISTS ] 数据库名;
+8.使用数据库：
+use 库名;
+9.查看表结构：
+desc 表名；
+10.查看服务器版本：
+方法一：select version();
+方法二：mysql --version或mysql --V
+</code></pre>
+<h3 id="查询命令"><a href="#查询命令" class="headerlink" title="查询命令"></a>查询命令</h3><pre><code>1.起别名
+方式一：
+select name AS 名字
+select last_name AS 姓,first_name AS 名 from employees;
+方式二：
+select last_name 姓,first_name 名 from employees;(AS可以用空格代替)
+注意点：
+错误：
+SELECT salary AS OUT put FROM employees
+正确：
+SELECT salary AS &quot;OUT put&quot; FROM employees(不想让它是关键词可以加个双引号或单引号)
+2.去重
+SELECT DISTINCT department_id FROM employees;(加个distinct)
+3.连接
+sql里的＋只能用于运算,SQL里连接用concat
+SELECT CONCAT （&#39;a&#39;，&#39;b&#39;） AS 别名
+</code></pre>
 
     </div>
 
